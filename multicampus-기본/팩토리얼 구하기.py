@@ -5,3 +5,10 @@
 n! = 1 * 2 * 3 * ... * n
 5! = 1 * 2 * 3 * 4 * 5
 '''
+
+
+def factorial(n):  # 숫자 n을 받는 함수
+    if n < 2:  # 2보다 작으면 빠져나오는 최소조건
+        return n
+    else:
+        return n * factorial(n - 1)  # 최소조건 전까진 하나씩 줄여가며 재귀

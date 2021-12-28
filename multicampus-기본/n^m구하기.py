@@ -9,3 +9,10 @@ n ^ m = n(1) * n(2) * n(3) * ... * n(m)
 2 ^ 3 = 2 * 2 * 2
 5 ^ 4 = 5 * 5 * 5 * 5
 '''
+
+
+def power_nm(n, m):  # 두 정수를 받는 함수
+    result = 1  # 최종 결과값으로 쓸 변수
+    for _ in range(m):  # m 번 반복
+        result = result * n  # 지속적으로 n만큼 곱해나감
+    return result  # 결과리턴
