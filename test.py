@@ -1,15 +1,19 @@
-def make_tree(n):
-    global cnt
-    if n <= 6:
-        make_tree(n*2)
-
-        arr[n] = cnt
-        cnt += 1
-
-        make_tree(n*2 + 1)
+import random
 
 
-arr = [None for _ in range(7)]
-cnt = 1
-make_tree(1)
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+
+    left_arr = [x for x in arr[1:] if x <= pivot]
+    right_arr = [x for x in arr[1:] if x > pivot]
+
+    return quick_sort(left_arr) + [pivot] + quick_sort(right_arr)
+
+
+arr = [random.randint(20, 99) for _ in range(20)]
+
+
 print(arr)
+print(quick_sort(arr))
