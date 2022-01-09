@@ -7,7 +7,7 @@ dj = [0, 0, -1, 1]
 
 
 def find_end(arr, i, j):
-    global di, dj
+
     stack = deque()
     start = arr[i][j]
     stack.append((i, j))
@@ -35,7 +35,6 @@ def find_start(arr):
         for j in range(len(arr)):
             if arr[i][j] == 3:
                 find_end(arr, i, j)
-                print('sdfsdfsdf', i, j)
 
 
 for j in range(end):
@@ -45,3 +44,4 @@ for j in range(end):
         arr.append(list(map(int, input())))
     print(arr)
     print(find_start(arr))
+https: // swexpertacademy.com/main/learn/course/lectureProblemViewer.do
